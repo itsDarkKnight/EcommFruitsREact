@@ -68,7 +68,6 @@ const Updatedata=(e)=>
     <label htmlfor="inputAddress" className="form-label">Discription</label>
     <input type="text" className="form-control" value={description} id="description" onChange={(e)=>setdescription(e.target.value)}/>
   </div>
-  
   <div className="col-md-2">
     
   </div>  
