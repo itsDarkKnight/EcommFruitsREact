@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from './components/Navbar';
+import Displayfruits from './components/Displayfruits';
+import { BrowserRouter,Route,Routes } from 'react-router-dom';
+import Addfruits from './components/Addfruits';
+import Updateform from './components/Updateform';
+import Demofile from './components/Demofile';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+    <div  style={{background: 'black'}}>
+    <Navbar/>
+     
+      <Routes>
+        <Route path='/add' Component={Addfruits}/>
+        <Route path='/display' Component={Displayfruits}/>
+        <Route exact path='/update/:id' Component={Updateform}/>
+        
+      </Routes>
+      </div>
+      </BrowserRouter>
+
+      
+     
+     
+    
   );
 }
 
